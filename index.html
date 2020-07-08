@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="navbar">
+        <a href="#" class="logo">ToDo List</a>
+        <ul id="nav-items">
+            <li class="nav-item"><a href="#"></a>Tasks</li>
+            <li class="nav-item"><a href="#"></a>Calander</li>
+            <li class="nav-item"><a href="#"></a>Timer</li>
+        </ul>
+    </section>
+
+    <section id="main">
+        <h1>To Do List</h1>
+        <div id="tasks-control">
+            <input type="text" id="input" placeholder="Add a new task">
+            <a id="button" class="btn">Add Task</a>
+        </div>
+        <div id="tasks" class="tasks-list"></div>
+    </section>
+
+
+    <script src="logic.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

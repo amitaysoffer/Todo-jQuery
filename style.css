@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none; 
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* navbar section */
+#navbar {
+    padding: 0 20px;
+    background: #333;
+    color: #f4f4f4;
+    display: grid;
+    height: 70px;
+    background-color: #2c3e50;
+    grid-template-columns: 2fr 1fr;
+}
+
+#navbar .logo {
+    grid-area: 'logo';
+    font-size: 34px;
+}
+
+#navbar #nav-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#navbar .nav-item {
+        display: grid;
+        text-align: center;
+        cursor: pointer;
+}
+
+#navbar .nav-item:hover {
+    background: #607b8b;
+}
+
+#navbar .logo {
+    display: grid;
+    align-items: center;
+}
+
+/* main control */
+#main {
+    padding: 100px 150px;
+    margin: 0 auto;
+}
+
+#main #tasks-control {
+    display: grid;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    grid-template-areas: '. i i i i i . b .';
+}
+
+#main #input {
+    padding: 0 10px;
+    font-size: 25px;
+    grid-area: i;
+    width: 100%;
+}
+
+#main #button {  
+    grid-area: b; 
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #3b5998;
+    border: none;
+    border-radius: 5px;   
+    box-shadow: 1px 1px 5px #2C3E50;
+}
+
+#main .task {
+    border: #607b8b solid 1px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    background: #eee;
+    box-shadow: 1px 1px 1px;
+    margin: 5px 0;
+}
+
+#main .task:nth-child(odd) {
+    background: #f9f9f9;
+  }
+
+#main .task:hover {
+    background: #ddd;
+}
+
+#main .task span {
+    font-size: 20px;
+}
+
+#delete-task {
+    justify-self: end;
+    margin-right: 10px;
+    color: #cd6839;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    #main {
+        padding: 10px;
+    }
+
+    #navbar {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    #navbar #nav-items {
+        grid-template-columns: 1fr;
+    }
+
+    #navbar .logo {
+        justify-content: center;
+    } 
+
+    #main #button {
+        grid-area: auto;
+    }
+
+    #main #input {
+        grid-area: auto;
+        padding: 5px;
+    }
+
+    #main #tasks-control {
+        grid-template-areas: none;
+    }
+    
+    #delete-task {
+        font-size: 25px;
+    }
+}
+
+

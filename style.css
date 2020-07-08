@@ -92,8 +92,6 @@ ul {
     padding: 10px;
     width: 100%;
     border-radius: 5px;
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr 1fr;
     background: #eee;
     box-shadow: 1px 1px 1px;
     margin: 5px 0;
@@ -109,26 +107,61 @@ ul {
 
 #main .task p {
     font-size: 20px;
-
+    display: inline;
 }
 
 #delete-task {
-    justify-self: center;
-    color: #cd6839;
+    float: right;
     cursor: pointer;
+    margin-left: auto;
+    color: #4d8e42
 }
 
 #edit-task {
-    align-items: center;
+    margin-right: 10px;
     cursor: pointer;
 }
 
-#add-notes {
+/* Notes */
+#add-note {
     color: #005bd6;
+    cursor: pointer;
 }
 
+#notes {
+    margin: 30px 10px;
+}
+
+#notes .note {
+    padding: 5px 1px;
+    border-bottom: #999 solid 1px;
+}
+
+#note-input{
+    padding: 0 10px;
+    font-size: 20px;
+    width: 96%;
+}
+
+#note-control {
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+#notes #delete-note {
+    margin: 0 5px;
+    color: #cd6839; 
+    cursor: pointer;
+}
+
+#notes .note .note-text {
+    display: inline;
+    font-size: 16px;
+}
+
+
 /* Mobile settings */
-@media(max-width: 499px) {
+@media(max-width: 700px) {
     #main {
         padding: 10px;
     }
@@ -153,6 +186,7 @@ ul {
     #main #input {
         grid-area: auto;
         padding: 5px;
+        margin: 10px 0;
     }
 
     #main #tasks-control {
@@ -161,6 +195,10 @@ ul {
     
     #delete-task {
         font-size: 25px;
+    }
+
+    #note-input {
+        width: 93%;
     }
 }
 

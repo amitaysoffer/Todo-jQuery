@@ -16,7 +16,19 @@ $('#tasks').on('click', '#delete-task', function () {
     todo.deleteTask(taskID);
 })
 
+// click to edit task
+$('#tasks').on('click', '#edit-task', function() {
+    const taskText = $(this).closest('.task').find('.task-text').text();
+    const taskID = $(this).closest('.task').attr('id');
+    const newText = prompt('Edit existing task', taskText);
+    
+    todo.editTask(taskID, newText);
+});
 
+// click to add notes to task
+// $('#tasks').on('click', '#add-notes', function() {
+    
+// })
 
 
 todo.addTask('Wash the car');

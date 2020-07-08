@@ -13,7 +13,7 @@ const Todo = function () {
     const addTask = function (text) {
         tasks.push({
             text: text,
-            id: 'task'+idCounter++
+            id: 'task' + idCounter++
         });
         // console.log(text);
         renderer.renderTasks(tasks);
@@ -32,11 +32,20 @@ const Todo = function () {
                 // console.log(taskID);
             }
         }
-        console.log(tasks)
         renderer.renderTasks(tasks);
     };
 
-    return { getTasks, addTask, deleteTask }
+    // edit task
+    const editTask = function (taskID, newText) {
+        for (let i in tasks) {
+            if (tasks[i].id == taskID) {
+                tasks[i].text = newText   
+            }
+        }
+        renderer.renderTasks(tasks);
+    }
+
+    return { getTasks, addTask, deleteTask, editTask }
 };
 
 

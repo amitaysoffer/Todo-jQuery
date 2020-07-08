@@ -86,13 +86,14 @@ ul {
     box-shadow: 1px 1px 5px #2C3E50;
 }
 
+/* Tasks */
 #main .task {
     border: #607b8b solid 1px;
     padding: 10px;
     width: 100%;
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 10fr 1fr;
+    grid-template-columns: 1fr 10fr 1fr 1fr;
     background: #eee;
     box-shadow: 1px 1px 1px;
     margin: 5px 0;
@@ -106,18 +107,28 @@ ul {
     background: #ddd;
 }
 
-#main .task span {
+#main .task p {
     font-size: 20px;
+
 }
 
 #delete-task {
-    justify-self: end;
-    margin-right: 10px;
+    justify-self: center;
     color: #cd6839;
     cursor: pointer;
 }
 
-@media(max-width: 768px) {
+#edit-task {
+    align-items: center;
+    cursor: pointer;
+}
+
+#add-notes {
+    color: #005bd6;
+}
+
+/* Mobile settings */
+@media(max-width: 499px) {
     #main {
         padding: 10px;
     }

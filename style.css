@@ -93,8 +93,8 @@ ul {
     width: 100%;
     border-radius: 5px;
     background: #eee;
-    box-shadow: 1px 1px 1px;
-    margin: 5px 0;
+    box-shadow: 1px 1px 3px;
+    margin: 10px 0;
 }
 
 #main .task:nth-child(odd) {
@@ -140,7 +140,7 @@ ul {
 #note-input{
     padding: 0 10px;
     font-size: 20px;
-    width: 96%;
+    width: 94%;
 }
 
 #note-control {

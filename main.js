@@ -4,9 +4,12 @@ const todo = Todo();
 // click to add a task
 $('#button').click(function () {
     const taskInput = $('#input');
-    todo.addTask(taskInput.val());
-
-    taskInput.val("")
+    if (taskInput.val() == "") {
+        alert('You must write something')
+    } else {
+        todo.addTask(taskInput.val());
+        taskInput.val("")
+    }
 })
 
 // click to delete a task
@@ -30,8 +33,12 @@ $('#tasks').on('click', '#add-note', function () {
     const noteInput = $(this).siblings('input');
     const noteText = noteInput.val();
 
-    todo.addNote(taskID, noteText);
-    noteInput.val("");
+    if (noteText == "") {
+        alert('You must write something')
+    } else {
+        todo.addNote(taskID, noteText);
+        noteInput.val("");
+    }
 })
 
 // click to delete a note from a task
@@ -50,8 +57,3 @@ todo.addNote('task1', 'The blue one');
 
 todo.addNote('task2', 'Make sure you do Math');
 todo.addNote('task2', 'Use a pen');
-// console.log(todo.getTasks());
-
-// todo.deleteTask('task1');
-// console.log(todo.getTasks());
-

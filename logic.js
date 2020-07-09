@@ -37,8 +37,6 @@ const Todo = function () {
             if (tasks[i].id == taskID) {
                 for (let j = 0; j < tasks[i].notes.length; j++) {
                     if (tasks[i].notes[j].id == noteID) {
-                        console.log(tasks[i].notes);
-                        console.log(tasks[i]);
                         tasks[i].notes.splice(j, 1);
                     }
                 }
@@ -51,8 +49,6 @@ const Todo = function () {
     // remove task
     const deleteTask = function (taskID) {
         for (let index in tasks) {
-            console.log(tasks[index].id)
-            console.log(taskID);
             if (tasks[index].id == taskID) {
                 tasks.splice(index, 1);
             }
